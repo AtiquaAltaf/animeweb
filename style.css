@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: #fd9bca;
+    font-family: "Bebas Neue" ;
+ 
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: skyblue; */
+    
+}
+#left > #logo{
+     width: 110px;
+     
+}
+#center > #navlinks{
+    display: flex;
+    font-size: 30px;
+    list-style: none;
+    gap: 25%;
+
+}
+#center :hover {
+   color: #581c37;
+}
+
+#navlinks> li > a{
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+   
+}
+#right {
+    margin-right: 2%;
+    height: 2%;
+    border: black;
+}
+
+#right > a {
+    border: 2px solid black;
+    font-size: 25px;
+    padding: 2% 0%;
+    border-radius: 5px;
+    color: white;
+    background-color: #b56576;
+    text-decoration: none;
+   
+
+}
+#hero > h1 {
+    color: #581c37;
+    width: 100%;
+    font-size: 250px;
+    font-family: "Bebas Neue";
+    font-weight: 150;
+    border: 5px solid #581c37;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+}
+#hero h1:hover {
+    color: #6d597a; /* Text color changes to red on hover */
+    border-color: #6d597a;
+}
+
+
+#hero h3 {
+    font-size: 37px;
+    position: absolute;
+    text-align: center;
+    top: 90%;
+    left: 50%;
+    color: #b5179e;
+    font-weight: 70;
+    transform: translate(-50%, -50%);}
+#images img{
+    width: 350px;
+    height: 400px;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50px;
+    animation: fadeInOut 15s infinite;
+}
+#images #img3{
+    transform: translate(-50%, -50%) rotate( -5deg);
+    animation-delay: 2s;
+}
+#images #img2{
+    transform: translate(-50%, -50%) rotate( -10deg);
+    animation-delay: 4s;
+}
+#images #img1{
+    transform: translate(-50%, -50%) rotate( -15deg);
+    animation-delay: 6s;
+}
+#images #img4{
+    transform: translate(-50%, -50%) rotate( -20deg);
+    animation-delay: 8s;
+}
+#images #img5{
+    transform: translate(-50%, -50%) rotate( -25deg);
+    animation-delay: 9s;
+} 
+@keyframes fadeInOut {
+    0% , 20%{
+        opacity: 1;
+    }
+    21% , 100% {
+        opacity: 0;
+    }
+}
+@media (max-width : 600px){
+    #left > #logo{
+        width: 50px;
+   }
+   #navlinks > li > a {
+    font-size: 19px;}
+    #hero h1{
+        font-size: 100px;
+    }
+    #hero h3{
+        font-size: 12px;
+    }
+    #images img{
+        width: 180px;
+        height: 180px;
+    }
+}
+#images img:hover {
+    opacity: 1; /* Make sure it's visible */
+    transform: scale(1.1); /* Slightly increase the size on hover */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for both scale and opacity */
+}
